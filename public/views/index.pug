@@ -1,0 +1,38 @@
+include includes/header.pug
+    title=titulo
+body
+    nav(class="navbar navbar-expand-lg navbar-light bg-light")
+        a(class="navbar-brand" href="#") APA
+        a(class="nav-link" href="#") Hacer
+    div(class="")
+        div(class="d-flex flex-column align-items-center bd-highlight")
+            div(class="")
+                form(action="/" method="GET" class="")
+                    div(class="form-group")
+                        label(for="nombreAutor") Nombre del autor:
+                        input(type="text" class="form-control" name="nombreAutor" id="nombreAutor" placeholder="Nombre del autor")
+                    div(class="form-group")
+                        label(for="apellidoAutor") Apellido del autor:
+                        input(type="text" class="form-control" name="apellidoAutor" id="apellidoAutor" placeholder="Apellido del autor")
+                    div(class="form-group")
+                        label(for="titutloLibro") Titulo del libro:
+                        input(type="text" class="form-control" name="titutloLibro" id="titutloLibro" placeholder="Titulo del libro")
+                    div(class="form-group")
+                        label(for="subtitutloLibro") Subtitulo del libro:
+                        input(type="text" class="form-control" name="subtitutloLibro" id="subtitutloLibro" placeholder="Subtitulo del libro")
+                    div(class="form-group")
+                        label(for="anioPublicacion") Año del publicacion:
+                        input(type="text" class="form-control" name="anioPublicacion" id="anioPublicacion" placeholder="Año del publicacion")
+                    div(class="form-group")
+                        label(for="nombreEditorial") Nombre de la editorial:
+                        input(type="text" class="form-control" name="nombreEditorial" id="nombreEditorial" placeholder="Nombre de la editorial")
+                    div(class="form-group")
+                        label(for="numeroEdicion") Numero de edicion:
+                        input(type="text" class="form-control" name="numeroEdicion" id="numeroEdicion" placeholder="Numero de edicion")
+                    div(class="form-group")
+                        label(for="paisPublicacion") Pais de publicacion:
+                        input(type="text" class="form-control" name="paisPublicacion" id="paisPublicacion" placeholder="Pais de publicacion")
+                    button(type="submit" class="btn btn-primary") Hacer
+            div(class="p-4")
+                p(class="h1")=referenciaAPA
+    include includes/footer.pug
