@@ -39,7 +39,7 @@ app.get('/formatoiee', (req, res)=>{
     let nombreEditorialB = req.query.nombreEditorial || '';
     let numeroEdicionB = req.query.numeroEdicion || '';
     let paisPublicacionB = req.query.paisPublicacion || '';
-    res.render('index', {
+    res.render('formatoieee', {
         titulo: 'Inicio',
         referenciaAPA: formato.construccionAPA(nombreAutorB, apellidoAutorB, titutloLibroB, subtitutloLibroB, anioPublicacionB, numeroEdicionB, nombreEditorialB, paisPublicacionB) || ''
     });

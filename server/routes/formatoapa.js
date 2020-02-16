@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const {Formatos} = require('../classes/Formatos');
 
 app.set('view engine', 'pug');
-app.set("views", "public/views/paginasdeformatos/");
+app.set("views", "public/views/");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
@@ -43,8 +43,8 @@ app.get('/formatoapa', (req, res)=>{
      
      */
     console.log(req.query.nombreAutor);
-    res.render('index', {
-        titulo: 'Inicio',
+    res.render('paginasdeformatos/formatoapa', {
+        titulo: 'Formato APA',
         referenciaAPA: formato.construccionAPA(nombreAutorB, apellidoAutorB, titutloLibroB, subtitutloLibroB, anioPublicacionB, numeroEdicionB, nombreEditorialB, paisPublicacionB) || ''
     });
 });

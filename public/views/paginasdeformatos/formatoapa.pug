@@ -1,13 +1,11 @@
-include includes/header.pug
+include /includes/header.pug
     title=titulo
 body
-    nav(class="navbar navbar-expand-lg navbar-light bg-light")
-        a(class="navbar-brand" href="#") APA
-        a(class="nav-link" href="#") Hacer
+    include /includes/nav.pug
     div(class="")
         div(class="d-flex flex-column align-items-center bd-highlight")
             div(class="")
-                form(action="/" method="GET" class="")
+                form(action="/formatoapa" method="GET" class="")
                     div(class="form-group")
                         label(for="nombreAutor") Nombre del autor:
                         input(type="text" class="form-control" name="nombreAutor" id="nombreAutor" placeholder="Nombre del autor")
@@ -35,4 +33,4 @@ body
                     button(type="submit" class="btn btn-primary") Hacer
             div(class="p-4")
                 p(class="h1")=referenciaAPA
-    include includes/footer.pug
+    include /includes/footer.pug

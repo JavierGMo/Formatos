@@ -2,7 +2,6 @@ const express = require('express');
 const app = express();
 const pug = require('pug');
 const bodyParser = require('body-parser');
-const {Formatos} = require('../classes/Formatos');
 
 app.set('view engine', 'pug');
 app.set("views", "public/views/");
@@ -30,22 +29,8 @@ app.use(bodyParser.urlencoded({extended: false}));
 //         return true;
 // }
 app.get('/', (req, res)=>{
-    const formato = new Formatos();
-    let nombreAutorB = req.query.nombreAutor || '';
-    let apellidoAutorB = req.query.apellidoAutor || '';
-    let titutloLibroB = req.query.titutloLibro || '';
-    let subtitutloLibroB = req.query.subtitutloLibro || '';
-    let anioPublicacionB = req.query.anioPublicacion || '';
-    let nombreEditorialB = req.query.nombreEditorial || '';
-    let numeroEdicionB = req.query.numeroEdicion || '';
-    let paisPublicacionB = req.query.paisPublicacion || '';
-    /**
-     
-     */
-    console.log(req.query.nombreAutor);
     res.render('index', {
         titulo: 'Inicio',
-        referenciaAPA: formato.construccionAPA(nombreAutorB, apellidoAutorB, titutloLibroB, subtitutloLibroB, anioPublicacionB, numeroEdicionB, nombreEditorialB, paisPublicacionB) || ''
     });
 });
 
